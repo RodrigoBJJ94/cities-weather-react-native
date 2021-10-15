@@ -3,12 +3,13 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
         alignItems: 'center',
         justifyContent: 'center',
     },
     notFound: {
         fontSize: 18,
-        marginTop: 10
+        marginTop: 10,
+        color: '#fff'
     }
 });
