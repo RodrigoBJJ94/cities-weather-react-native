@@ -46,7 +46,7 @@ export default function App() {
             <View style={Styles.container}>
                 <StatusBarMain />
                 <Search fetchWeatherData={fetchWeatherData}/>
-                <Text style={Styles.primaryText}>City Not Found! Try Different City</Text>
+                <Text style={Styles.notFound}>City Not Found!</Text>
             </View>
         );
     };

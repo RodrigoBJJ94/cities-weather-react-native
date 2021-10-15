@@ -7,7 +7,8 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    primaryText: {
-
+    notFound: {
+        fontSize: 18,
+        marginTop: 10
     }
 });

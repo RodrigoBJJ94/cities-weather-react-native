@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { View, ImageBackground } from 'react-native';
 import Styles from './Styles';
-import Search from '../Search/Search';
 import { Ash, Cloudy, Drizzle, Dust, Fog, Mist, Night, Rain, RainSun, Sand, Smoke, Snow, Sunny, Thunderstorm, Tornado } from '../Images/Images';
+import Search from '../Search/Search';
 import HumidityAndWind from './HumidityAndWind';
 import Titles from './Titles';
 import Temperatures from './Temperatures';

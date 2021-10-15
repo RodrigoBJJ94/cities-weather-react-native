@@ -3,6 +3,6 @@ import { StatusBar } from 'react-native';
 
 export default function StatusBarMain() {
     return (
-        <StatusBar backgroundColor='#222' />
+        <StatusBar backgroundColor='#111' />
     );
 };
