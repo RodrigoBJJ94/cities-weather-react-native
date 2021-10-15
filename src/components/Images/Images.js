@@ -1,6 +1,20 @@
 const haze = require('../../assets/img/haze.jpg');
-const rainy = require('../../assets/img/rainy.jpg');
-const snow = require('../../assets/img/snow.jpg');
-const sunny = require('../../assets/img/sunny.jpg');
+const Ash = require('../../assets/img/Ash.jpeg')
+const Cloudy = require('../../assets/img/Cloudy.jpeg')
+const DrizzleDay = require('../../assets/img/DrizzleDay.jpeg')
+const DrizzleNight = require('../../assets/img/DrizzleNight.jpeg')
+const Dust = require('../../assets/img/Dust.jpeg')
+const MistDay = require('../../assets/img/MistDay.jpeg')
+const MistNight = require('../../assets/img/MistNight.jpeg')
+const Night = require('../../assets/img/Night.jpeg')
+const Rain = require('../../assets/img/Rain.jpeg')
+const SandDay = require('../../assets/img/SandDay.jpeg')
+const SandNight = require('../../assets/img/SandNight.jpeg')
+const Smoke = require('../../assets/img/Smoke.jpeg')
+const SnowDay = require('../../assets/img/SnowDay.jpeg')
+const SnowNight = require('../../assets/img/SnowNight.jpeg')
+const Sunny = require('../../assets/img/Sunny.jpeg')
+const Thunderstorm = require('../../assets/img/Thunderstorm.jpeg')
+const Tornado = require('../../assets/img/Tornado.jpeg')
 
-export { haze, rainy, snow, sunny };
+export { Ash, Cloudy, DrizzleDay, DrizzleNight, Dust, MistDay, MistNight, Night, Rain, SandDay, SandNight, Smoke, SnowDay, SnowNight, Sunny, Thunderstorm, Tornado };
