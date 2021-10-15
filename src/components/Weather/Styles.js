@@ -16,15 +16,16 @@ export default StyleSheet.create({
     },
     cityAndCountry: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: 'bold',
     },
     weather: {
         color: '#fff',
+        fontSize: 15,
     },
     weatherDescription: {
         color: '#fff',
-        fontSize: 18,
+        fontSize: 20,
         textTransform: 'capitalize',
     },
     temperatures: {
@@ -32,10 +33,12 @@ export default StyleSheet.create({
         marginTop: 12,
     },
     others: {
-        marginTop: 340,
+        alignItems: 'center',
+        marginTop: 0,
         marginLeft: 12,
     },
-    black: {
-        color: '#000'
+    data: {
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        paddingBottom: 8,
     }
 });

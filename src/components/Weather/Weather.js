@@ -10,8 +10,7 @@ import Temperatures from './Temperatures';
 export default function Weather({ weatherData, fetchWeatherData }) {
     const [backgroundImage, setBackgroundImage] = useState(null);
 
-    const { weather, name, main: { temp, feels_like, humidity },
-        sys: { country }, wind: { speed } } = weatherData;
+    const { weather, name, main: { temp, feels_like, humidity }, sys: { country }, wind: { speed } } = weatherData;
     const [{ main }] = weather;
     const [{ icon }] = weather;
     const [{ description }] = weather;
@@ -40,12 +39,14 @@ export default function Weather({ weatherData, fetchWeatherData }) {
     };
 
     return (
-        <View style={Styles.container}>  
+        <View style={Styles.container}>
             <ImageBackground source={backgroundImage} style={Styles.backgroundImg} resizeMode='cover'>
-                <Search fetchWeatherData={fetchWeatherData} />
-                <Titles name={name} country={country} description={description} />
-                <Temperatures temp={temp} feels_like={feels_like} Sunny={Sunny} />
-                <HumidityAndWind humidity={humidity} speed={speed} />
+                <View style={Styles.data}>
+                    <Search fetchWeatherData={fetchWeatherData} />
+                    <Titles name={name} country={country} description={description} />
+                    <Temperatures temp={temp} feels_like={feels_like} Sunny={Sunny} />
+                    <HumidityAndWind humidity={humidity} speed={speed} />
+                </View>
             </ImageBackground >
         </View >
     );

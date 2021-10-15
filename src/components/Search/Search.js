@@ -12,7 +12,8 @@ export default function Search({ fetchWeatherData }) {
                 <Input cityName={cityName} setCityName={setCityName} />
             </View>
             <View>
-                <TouchableOpacity style={Styles.button} onPress={() => fetchWeatherData(cityName)}>
+                <TouchableOpacity style={Styles.button}
+                    onPress={() => fetchWeatherData(cityName)}>
                     <Text style={Styles.text}>Search</Text>
                 </TouchableOpacity>
             </View>
