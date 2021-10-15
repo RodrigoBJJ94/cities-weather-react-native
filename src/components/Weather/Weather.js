@@ -17,6 +17,7 @@ export default function Weather({ weatherData, fetchWeatherData }) {
     } = weatherData;
     const [{ main }] = weather;
     const [{ icon }] = weather;
+    const [{ description }] = weather;
 
     useEffect(() => {
         setBackgroundImage(getBackgroundImg(main));
@@ -43,7 +44,7 @@ export default function Weather({ weatherData, fetchWeatherData }) {
         <View style={Styles.container}>
             <ImageBackground source={backgroundImage} style={Styles.backgroundImg} resizeMode='cover'>
                 <Search fetchWeatherData={fetchWeatherData} />
-                <Titles name={name} country={country} main={main} />
+                <Titles name={name} country={country} description={description} />
                 <Temperatures temp={temp} feels_like={feels_like} />
                 <HumidityAndWind humidity={humidity} speed={speed} />
             </ImageBackground >
