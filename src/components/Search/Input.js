@@ -4,7 +4,7 @@ import { TextInput } from 'react-native';
 export default function input(props) {
     return (
         <TextInput
-            placeholder='Enter the city name'
+            placeholder='Enter The City Name'
             placeholderTextColor='#fff'
             style={{color: '#fff', fontSize: 15}} 
             value={props.cityName}

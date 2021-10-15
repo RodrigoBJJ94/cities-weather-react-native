@@ -8,8 +8,8 @@ export default function Search({ fetchWeatherData }) {
 
     return (
         <View style={Styles.search}>
-            <View style={Styles.input}>
-                <Input style={Styles.input} cityName={cityName} setCityName={setCityName} />
+            <View>
+                <Input cityName={cityName} setCityName={setCityName} />
             </View>
             <View>
                 <TouchableOpacity style={Styles.button} onPress={() => fetchWeatherData(cityName)}>

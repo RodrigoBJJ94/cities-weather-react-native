@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Styles from './Styles';
 
-export default function Temperatures({ temp, feels_like }) {
+export default function Temperatures({ temp, feels_like, Sunny }) {
     return (
         <View style={Styles.temperatures}>
             <Text style={Styles.weather}>Temperature: {temp.toFixed(0)}°C / {((temp * 9 / 5) + 32).toFixed(0)}°F</Text>

@@ -14,7 +14,7 @@ export default StyleSheet.create({
         height: 28,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 4
+        borderRadius: 2,
     },
     text: {
         color: '#fff',

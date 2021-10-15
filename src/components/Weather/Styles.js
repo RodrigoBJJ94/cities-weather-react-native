@@ -33,5 +33,9 @@ export default StyleSheet.create({
     },
     others: {
         marginTop: 340,
+        marginLeft: 12,
     },
+    black: {
+        color: '#000'
+    }
 });
