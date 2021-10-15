@@ -3,6 +3,7 @@ import { View, Text, ActivityIndicator } from 'react-native';
 import Styles from './Styles';
 import Weather from './components/Weather/Weather';
 import Search from './components/Search/Search';
+import StatusBarMain from './components/StatusBar/StatusBarMain';
 
 const cod = "46a9246bebba16d42b36aac3fc3ba8af";
 
@@ -34,6 +35,7 @@ export default function App() {
     if(!loaded) {
         return (
             <View style={Styles.container}>
+                <StatusBarMain />
                 <ActivityIndicator color='gray'  size={36} />
             </View>
         );
@@ -42,14 +44,16 @@ export default function App() {
     else if(weatherData === null) {
         return (
             <View style={Styles.container}>
+                <StatusBarMain />
                 <Search fetchWeatherData={fetchWeatherData}/>
                 <Text style={Styles.primaryText}>City Not Found! Try Different City</Text>
             </View>
         );
     };
 
-    return (
+    return (  
         <View style={Styles.container}>
+        <StatusBarMain />
             <Weather weatherData={weatherData} fetchWeatherData={fetchWeatherData}  />
         </View>
     );

@@ -1,20 +1,16 @@
 import React, { useState } from 'react'
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import Styles from './Styles';
+import Input from './Input';
 
 export default function Search({ fetchWeatherData }) {
-
     const [cityName, setCityName] = useState('');
 
     return (
         <View style={Styles.search}>
-            <TextInput
-                placeholder='Enter City name'
-                value={cityName}
-                onChangeText={(text) => setCityName(text)}
-            />
+            <Input cityName={cityName} setCityName={setCityName} />
             <TouchableOpacity onPress={() => fetchWeatherData(cityName)}>
-                <Text>X</Text>
+                <Text>Search</Text>
             </TouchableOpacity>
         </View>
     );

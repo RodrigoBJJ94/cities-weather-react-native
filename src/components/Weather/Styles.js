@@ -10,13 +10,13 @@ export default StyleSheet.create({
         flex: 1,
         width: Dimensions.get('screen').width
     },
-    headerText: {
-
+    main: {
+        alignItems: 'center',
     },
-    extraInfo: {
-
+    cityAndCountry: {
+        color: '#fff',
     },
-    info: {
-
+    weather: {
+        color: '#fff',
     }
 });
