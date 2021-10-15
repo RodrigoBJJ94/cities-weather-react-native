@@ -11,6 +11,7 @@ export default StyleSheet.create({
         backgroundColor: '#23a7be',
         width: 75,
         height: 30,
+        alignSelf: 'center',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 3,
@@ -18,5 +19,5 @@ export default StyleSheet.create({
     text: {
         color: '#fff',
         fontSize: 18,
-    }
+    },
 });

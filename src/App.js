@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
-import Styles from './Styles';
 import Weather from './components/Weather/Weather';
-import Search from './components/Search/Search';
-import StatusBarMain from './components/StatusBar/StatusBarMain';
+import NotLoaded from './components/NotLoaded/NotLoaded';
+import WeatherNull from './components/Null/WeatherNull';
 
 const cod = "46a9246bebba16d42b36aac3fc3ba8af";
 
@@ -13,16 +11,17 @@ export default function App() {
 
     async function fetchWeatherData(cityName) {
         setLoaded(false);
-        const ap = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${cod}`
+        const ap = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${cod}`;
+
         try {
             const response = await fetch(ap);
-            if(response.status == 200) {
+            if (response.status == 200) {
                 const data = await response.json();
                 setWeatherData(data);
             } else {
                 setWeatherData(null);
             };
-            setLoaded(true);       
+            setLoaded(true);
         } catch (error) {
             console.log(error);
         };
@@ -31,30 +30,14 @@ export default function App() {
     useEffect(() => {
         fetchWeatherData('Lajeado');
     }, []);
-    
-    if(!loaded) {
-        return (
-            <View style={Styles.container}>
-                <StatusBarMain />
-                <ActivityIndicator color='gray'  size={36} />
-            </View>
-        );
+
+    if (!loaded) {
+        return <NotLoaded />
     }
 
-    else if(weatherData === null) {
-        return (
-            <View style={Styles.container}>
-                <StatusBarMain />
-                <Search fetchWeatherData={fetchWeatherData}/>
-                <Text style={Styles.notFound}>City Not Found!</Text>
-            </View>
-        );
+    else if (weatherData === null) {
+        return <WeatherNull fetchWeatherData={fetchWeatherData} />
     };
 
-    return (  
-        <View style={Styles.container}>
-        <StatusBarMain />
-            <Weather weatherData={weatherData} fetchWeatherData={fetchWeatherData}  />
-        </View>
-    );
+    return <Weather weatherData={weatherData} fetchWeatherData={fetchWeatherData} />
 };

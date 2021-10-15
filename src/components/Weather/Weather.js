@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { View, ImageBackground } from 'react-native';
 import Styles from './Styles';
 import { Ash, Cloudy, Drizzle, Dust, Fog, Mist, Night, Rain, RainSun, Sand, Smoke, Snow, Sunny, Thunderstorm, Tornado } from '../Images/Images';
+import StatusBarMain from '../StatusBar/StatusBarMain';
 import Search from '../Search/Search';
-import HumidityAndWind from './HumidityAndWind';
 import Titles from './Titles';
 import Temperatures from './Temperatures';
+import HumidityAndWind from './HumidityAndWind';
 
 export default function Weather({ weatherData, fetchWeatherData }) {
     const [backgroundImage, setBackgroundImage] = useState(null);
 
     const { weather, name, main: { temp, feels_like, humidity }, sys: { country }, wind: { speed } } = weatherData;
-    const [{ main }] = weather;
-    const [{ icon }] = weather;
-    const [{ description }] = weather;
+    const [{ main, icon, description }] = weather;
 
     useEffect(() => {
         setBackgroundImage(getBackgroundImg(main));
@@ -40,7 +39,9 @@ export default function Weather({ weatherData, fetchWeatherData }) {
 
     return (
         <View style={Styles.container}>
-            <ImageBackground source={backgroundImage} style={Styles.backgroundImg} resizeMode='cover'>
+            <StatusBarMain />
+            <ImageBackground source={backgroundImage}
+                style={Styles.backgroundImg} resizeMode='cover'>
                 <View style={Styles.data}>
                     <Search fetchWeatherData={fetchWeatherData} />
                     <Titles name={name} country={country} description={description} />
