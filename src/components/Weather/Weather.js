@@ -40,15 +40,14 @@ export default function Weather({ weatherData, fetchWeatherData }) {
     return (
         <View style={Styles.container}>
             <StatusBarMain />
-            <ImageBackground source={backgroundImage}
-                style={Styles.backgroundImg} resizeMode='cover'>
+            <ImageBackground source={backgroundImage} style={Styles.backgroundImg} resizeMode='cover'>
                 <View style={Styles.data}>
                     <Search fetchWeatherData={fetchWeatherData} />
                     <Titles name={name} country={country} description={description} />
                     <Temperatures temp={temp} feels_like={feels_like} Sunny={Sunny} />
                     <HumidityAndWind humidity={humidity} speed={speed} />
                 </View>
-            </ImageBackground >
-        </View >
+            </ImageBackground>
+        </View>
     );
 };
