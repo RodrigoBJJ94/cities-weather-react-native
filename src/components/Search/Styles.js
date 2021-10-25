@@ -9,8 +9,8 @@ export default StyleSheet.create({
     },
     button: {
         backgroundColor: '#23a7be',
-        width: 75,
-        height: 30,
+        width: 90,
+        height: 32,
         alignSelf: 'center',
         alignItems: 'center',
         justifyContent: 'center',
@@ -18,6 +18,6 @@ export default StyleSheet.create({
     },
     text: {
         color: '#fff',
-        fontSize: 18,
+        fontSize: 20,
     },
 });

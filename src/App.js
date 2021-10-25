@@ -3,15 +3,13 @@ import Weather from './components/Weather/Weather';
 import NotLoaded from './components/NotLoaded/NotLoaded';
 import WeatherNull from './components/Null/WeatherNull';
 
-const cod = "46a9246bebba16d42b36aac3fc3ba8af";
-
 export default function App() {
     const [weatherData, setWeatherData] = useState(null);
     const [loaded, setLoaded] = useState(true);
 
     async function fetchWeatherData(cityName) {
         setLoaded(false);
-        const ap = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${cod}`;
+        const ap = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=46a9246bebba16d42b36aac3fc3ba8af`;
 
         try {
             const response = await fetch(ap);
