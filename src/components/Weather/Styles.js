@@ -17,14 +17,16 @@ export default StyleSheet.create({
     cityAndCountry: {
         color: '#fff',
         fontSize: 23,
-        fontWeight: 'bold',
+        fontFamily: 'Raleway-ExtraBold',
     },
     weather: {
         color: '#fff',
+        fontFamily: 'Raleway-Regular',
         fontSize: 17,
     },
     weatherDescription: {
         color: '#fff',
+        fontFamily: 'Raleway-Bold',
         fontSize: 21,
         textTransform: 'capitalize',
     },

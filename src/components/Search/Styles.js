@@ -9,15 +9,16 @@ export default StyleSheet.create({
     },
     button: {
         backgroundColor: '#23a7be',
-        width: 90,
-        height: 32,
-        alignSelf: 'center',
+        width: 100,
+        paddingTop: 4,
+        paddingBottom: 7,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 3,
     },
     text: {
         color: '#fff',
+        fontFamily: 'Raleway-ExtraBold',
         fontSize: 20,
     },
 });

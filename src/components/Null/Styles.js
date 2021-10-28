@@ -8,6 +8,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
     notFound: {
+        fontFamily: 'Raleway-Regular',
         fontSize: 18,
         marginTop: 10,
         color: '#fff'

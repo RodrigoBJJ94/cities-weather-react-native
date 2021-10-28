@@ -6,7 +6,7 @@ export default function input({ cityName, setCityName }) {
         <TextInput
             placeholder='Enter The City Name'
             placeholderTextColor='#fff'
-            style={{ color: '#fff', fontSize: 18, fontWeight: 'bold', width: 180 }}
+            style={{ color: '#fff', fontSize: 18, fontFamily: 'Raleway-Bold', width: 190 }}
             value={cityName}
             onChangeText={(text) => setCityName(text)}
         />
