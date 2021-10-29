@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Weather from './components/Weather/Weather';
+import Weather from './components/Weather/Weather/Weather';
 import NotLoaded from './components/NotLoaded/NotLoaded';
 import WeatherNull from './components/Null/WeatherNull';
 

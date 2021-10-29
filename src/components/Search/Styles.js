@@ -21,4 +21,11 @@ export default StyleSheet.create({
         fontFamily: 'Raleway-ExtraBold',
         fontSize: 20,
     },
+    input: {
+        color: '#fff',
+        fontSize: 18,
+        fontFamily: 'Raleway-Bold',
+        width: 190,
+        textAlign: 'center'
+    }
 });

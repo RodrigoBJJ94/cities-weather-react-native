@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { View, ImageBackground } from 'react-native';
 import Styles from './Styles';
-import { Ash, Cloudy, Drizzle, Dust, Fog, Mist, Night, Rain, RainSun, Sand, Smoke, Snow, Sunny, Thunderstorm, Tornado } from '../Images/Images';
-import StatusBarMain from '../StatusBar/StatusBarMain';
-import Search from '../Search/Search';
-import Titles from './Titles';
-import Temperatures from './Temperatures';
-import HumidityAndWind from './HumidityAndWind';
+import { Ash, Cloudy, Drizzle, Dust, Fog, Mist, Night, Rain, RainSun, Sand, Smoke, Snow, Sunny, Thunderstorm, Tornado } from '../../Images/Images';
+import StatusBarMain from '../../StatusBar/StatusBarMain';
+import Search from '../../Search/Search';
+import Titles from '../Titles/Titles';
+import Temperatures from '../Temperatures/Temperatures';
+import HumidityAndWind from '../HumidityAndWind/HumidityAndWind';
 
 export default function Weather({ weatherData, fetchWeatherData }) {
     const [backgroundImage, setBackgroundImage] = useState(null);
@@ -44,7 +44,7 @@ export default function Weather({ weatherData, fetchWeatherData }) {
                 <View style={Styles.data}>
                     <Search fetchWeatherData={fetchWeatherData} />
                     <Titles name={name} country={country} description={description} />
-                    <Temperatures temp={temp} feels_like={feels_like} Sunny={Sunny} />
+                    <Temperatures temp={temp} feels_like={feels_like} />
                     <HumidityAndWind humidity={humidity} speed={speed} />
                 </View>
             </ImageBackground>
